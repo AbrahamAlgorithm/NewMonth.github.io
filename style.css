@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     text-align: center;
+    overflow: hidden; /* Prevent vertical scrollbar */
 }
 
 .container {
@@ -29,4 +30,17 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('balloon.png'); /* Replace 'balloon.png' with your balloon image URL */
+    animation: float 15s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(0, -100%); }
 }
